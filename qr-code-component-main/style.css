@@ -1,7 +1,7 @@
 /* fontの指定 */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
-html, body {
+html, body, main {
     width: 100vw;
     height: 100vh;
 }
