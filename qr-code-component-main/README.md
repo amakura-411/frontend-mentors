@@ -47,6 +47,50 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+Given feedback  is
+
+**HTML**:
+- Good job on including the `<main>`, most beginners are not aware of its importance. However, you have way too many divs. In such a simple component, you only need a `<main>`, which can also act as the card. So, I would remove all `divs`.
+- The image must have `alt` text. This is essential for screen readers to understand the image. The alt text should be descriptive, and in this example, it also needs to say where it leads (frontendmentor.io).
+- "Scan the QR code" and the footer text should both be wrapped in a `<p>`.
+
+Hence, you should end up with the following HTML structure:
+```
+| <body>
+||   <main>
+|||     <img>
+        <h1>
+        <p>
+||   </main>
+||  < footer>
+|||     <p>
+||   </footer>
+```
+
+
+**CSS**:
+
+- Performance-wise, it's better to link fonts in the `<head>` of the HTML then using @import.
+It's good practice to include a at the top.
+- Remove width: 100% on html, main and body - they are 100% wide by default, because they are block elements.
+- Change height: 100vh to min-height: 100vh. And you only need to put it on the body.
+- Background color and text alignment should be moved from the card to the body. Additionally, add Flexbox to center the card horizontally and vertically:
+```
+background-color: hsl(212, 45%, 89%);
+text-align: center:
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+```
+- max-width on the card is way too big, and should not be in px but in rem. 1440px equals to 90 rem, but around 20rem should be all you need.
+- Remove width: min-content.
+- Font-size . Use rem instead.
+- Remove the fixed width and height on the image. You rarely want to set fixed dimensions, as this easily creates issues with responsiveness.
+Do add display: block and max-width: 100% on the image. The max-width prevents the image from overflowing the card.
+```
+
 
 
 ### Continued development

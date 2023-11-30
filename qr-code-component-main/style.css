@@ -1,65 +1,43 @@
-/* fontの指定 */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-
-html, body, main {
-    width: 100vw;
-    height: 100vh;
-}
-
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Outfit', sans-serif;
 }
 img {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 12px;
 }
-
-.container {
+body {
+    min-height: 100vh;
     background-color: hsl(212, 45%, 89%);;
-    width: 100%;
-    height: 100%;
-    max-width: 1440px;
     display: flex;
     text-align: center;
-    align-items: center;
     justify-content: center;
-    margin: auto;
-}
-.card {
-    border-radius: 25px;
-    background-color: hsl(0, 0%, 100%);
-}
-.content {
-    width: min-content;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-}
-.text {
-    display: flex;
     flex-direction: column;
-    margin: 10px;
 }
 
-.text .title {
+/* card */
+main {
+    font-family: 'Outfit', sans-serif;
+    max-width: 20rem;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.75rem;
+}
+h1{
     font-weight: 700;
-    font-size: 22px;
     color: hsl(218, 44%, 22%);
-    margin-block: 20px;
+    font-size: 1.5rem;
+    margin: 1rem;
 }
-.text .description {
+main p {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 0.938rem;
+    margin: 1rem;
+    padding: 1rem;
     color: hsl(220, 15%, 55%);
-    margin-inline: 12px;
 }
-.qr-code {
-    width: 300px;
-    height: 300px;
-    border-radius: 25px;
-}
+
 
