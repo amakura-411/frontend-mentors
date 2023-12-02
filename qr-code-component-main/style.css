@@ -2,13 +2,9 @@
     margin: 0;
     padding: 0;
 }
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem; 
-}
 body {
+    font-family: "outfit", sans-serif;
+    font-size: 62.5%;
     min-height: 100vh;
     background-color: hsl(212, 45%, 89%);;
     display: flex;
@@ -18,28 +14,39 @@ body {
     flex-direction: column;
 }
 
+
 /* card */
 main {
-    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
     max-width: 20rem;
     background-color: hsl(0, 0%, 100%);
-    padding: 1em;
-    border-radius: 1em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 1.25rem;
+}
+main * {
+    margin-inline: 1rem;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0.75rem; 
+    margin-bottom: 1rem;
 }
 h1{
     font-weight: 700;
+    font-size: 1.375rem;
+    padding-block: 0.5rem;
     color: hsl(218, 44%, 22%);
-    font-size: 1.5em;
-    padding-inline: 1em;
-}
-main * {
-    margin-bottom: 1em;
 }
 main p {
     font-weight: 400;
+    font-size: 0.9375rem;
     color: hsl(220, 15%, 55%);
-    font-size: 1.1em;
-    padding-inline: 1em;
+    padding-block: 0.5rem;
+    padding-inline: 0.75rem;
 }
 
 /* 375px 以下 */
@@ -53,3 +60,9 @@ main p {
     
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
