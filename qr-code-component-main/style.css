@@ -13,13 +13,6 @@ body {
     flex-direction: column;
 }
 
-body {
-    background-image: url(/design/desktop-design.jpg);
-    background-repeat: no-repeat;
-    /*  透明度 */
-    opacity: 0.5;
-    background-position: center;
-}
 
 
 /* card */
