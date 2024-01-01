@@ -27,7 +27,8 @@ body {
     flex-direction: column;
 }
 h1 {
-    visibility: hidden;
+    /* visibility: hidden; */
+    color: transparent;
 }
 .cards  {
     display: flex;
