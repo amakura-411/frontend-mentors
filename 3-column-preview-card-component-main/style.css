@@ -27,7 +27,7 @@ body {
     flex-direction: column;
 }
 h1 {
-    visibility: hidden;
+    color: var(--very-light-gray);
 }
 .cards  {
     display: flex;
@@ -90,16 +90,16 @@ h1 {
     color: var(--very-light-gray);
     border: 2px solid #fff;
 }
-a {
+main a {
     text-decoration: none;
 }
-.sedans button a {
+.sedans a {
     color: var(--bright-orange);
 }
-.suvs button a {
+.suvs  a {
     color: var(--dark-cyan);
 }
-.luxury button a {
+.luxury  a {
     color: var(--very-dark-cyan);
 }
 @media screen and (max-width: 375px) {
