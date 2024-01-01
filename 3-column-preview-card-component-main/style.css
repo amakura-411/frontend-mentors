@@ -10,122 +10,112 @@
     /* Neutral */
     --transparent-white: hsla(0, 0%, 100%, 0.75);
     --very-light-gray: hsl(0, 0%, 95%);
+    /* body-copy */
+    --font-size-body-copy: 15px;
     /* font */
     --font-family-400: 'Lexend Deca', sans-serif;
     --font-family-700: 'Big Shoulders Display', sans-serif;
-    /* --font-size-body-copy: 0.6rem; */
 }
-img {
-    display: block;
-    /* width: 50%;
-    height: 50%; */
-    /* width: 3rem;
-    height: 3rem; */
-}
+
+
+
 body {
     background-color: var(--very-light-gray);
-    max-width: 90rem;
-    width: 100%;
-}
-
-main {
-    border: 1px solid black;
-    width: 100%;
-    max-width: 60rem;
-    margin: 5rem auto;
-    display: flex;
-    justify-content: center;
-}
-main div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-main div > * {
-    margin: 2rem;
-}
-.sedans{
-    background-color: var(--bright-orange);
-}
-.suvs{
-    background-color: var(--dark-cyan);
-}
-.luxury{
-    background-color: var(--very-dark-cyan);
-}
-
-div h2 {
-    color: var(--very-light-gray);
-    font-family: var(--font-family-700);
-    font-weight: 700;
-    font-size: 36px;
-}
-div p {
-    color: var(--transparent-white);
-    font-size: var(--font-size-body-copy);
-    /* font-size: 15px; */
-    font-family: var(--font-family-400);
-    font-weight: 400;
-    line-height: 1.25rem;
-    opacity: 0.75;
-    letter-spacing: 0.005;
-    /* letter-spacing: 0.025rem; */
-}
-
-
-
-
-
-
-
-
-
-/* body {
-    background-image: url(../design/3-column_preview_card_component/desktop-design.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.5;
-} */
-/* 
-main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 50rem; 
-    max-width: 1440px;
-    margin: auto;
-}
-
-main div {
-    display: flex;
+    min-height: 100vh;
     flex-direction: column;
 }
-div * {
-    padding-inline: 40px;
+.cards  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-div button {
-    margin: 20px;
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.96875rem;
+}
+.sedans {
+    background-color: var(--bright-orange);
+    /* redis */
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.suvs {
+    background-color: var(--dark-cyan);
 }
 
-div button.learnmore {
-    background-color: var(--transparent-white);
+.luxury {
+    background-color: var(--very-dark-cyan);
+    /* redis */
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.title {
+    font-size: 2.5rem;
+    color: var(--very-light-gray);
+    font-family: var(--font-family-700);
+    margin-left: 0.03125rem;
+    margin-top: 2.1875rem;
+}
+.text {
+    color: var(--transparent-white);
+    font-size: var(--font-size-body-copy);
+    font-family: var(--font-family-400);
+    line-height: 1.5625rem;
+    margin-top: 1.5625rem;
+    max-width: 13.25rem;
+}
+.learnmore {
+    background-color: var(--very-light-gray);
+    font-size: var(--font-size-body-copy);
+    font-family: var(--font-family-400);
+    line-height: 1.5625rem;
+    margin-top: 5.1875rem;
     border: none;
-    padding: 2px;
-    border-radius: 20px;
-    width: 130px;
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    border-radius: 1.5625rem;
+    padding: 0.78125rem 1.96875rem;
+    margin-left: 0.03125rem;
 }
-img {
-    margin-top: 50px;
-    margin-bottom: 30px;
+.learnmore:active {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    border: 2px solid #fff;
 }
-p{
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+.sedans button {
+    color: var(--bright-orange);
 }
-main {
-    padding: 20px;
-} */
+.suvs button {
+    color: var(--dark-cyan);
+}
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+@media screen and (max-width: 375px) {
+    main.cards {
+        max-width: 232px;
+        flex-direction: column;
+        margin: 88px 24px;
+    }
+    .card .learnmore {
+        margin-top: 1.5625rem;
+    }
+    .sedans {
+        background-color: var(--bright-orange);
+        /* redis */
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    
+}
+
