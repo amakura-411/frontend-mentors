@@ -35,7 +35,7 @@ h1 {
     align-items: center;
     max-width: 57.5rem;
     max-height: 31.25rem;
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
 }
 .card {
     display: flex;
