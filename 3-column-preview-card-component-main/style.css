@@ -97,9 +97,9 @@ body {
 }
 @media screen and (max-width: 375px) {
     main.cards {
-        max-width: 232px;
+        max-width: 14.5rem;
         flex-direction: column;
-        margin: 88px 24px;
+        margin: 5.5rem 1.5rem;
     }
     .card .learnmore {
         margin-top: 1.5625rem;
