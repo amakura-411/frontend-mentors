@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan:hsl(179, 100%, 13%);
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    /* body-copy */
+    --font-size-body-copy: 15px;
+    /* font */
+    --font-family-400: 'Lexend Deca', sans-serif;
+    --font-family-700: 'Big Shoulders Display', sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+h1 {
+    /* visibility: hidden; */
+    color: transparent;
+}
+.cards  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 57.5rem;
+    max-height: 31.25rem;
+    /* margin-top: 2.5rem; */
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.96875rem;
+}
+.sedans {
+    background-color: var(--bright-orange);
+    /* redis */
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    /* redis */
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.title {
+    font-size: 2.5rem;
+    color: var(--very-light-gray);
+    font-family: var(--font-family-700);
+    margin-left: 0.03125rem;
+    margin-top: 2.1875rem;
+}
+.text {
+    color: var(--transparent-white);
+    font-size: var(--font-size-body-copy);
+    font-family: var(--font-family-400);
+    line-height: 1.5625rem;
+    margin-top: 1.5625rem;
+    max-width: 14.25rem;
+}
+.learnmore {
+    background-color: var(--very-light-gray);
+    font-size: var(--font-size-body-copy);
+    font-family: var(--font-family-400);
+    line-height: 1.5625rem;
+    margin-top: 5.1875rem;
+    border: none;
+    border-radius: 1.5625rem;
+    padding: 0.78125rem 1.96875rem;
+    margin-left: 0.03125rem;
+}
+.learnmore:active {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    border: 2px solid #fff;
+}
+main a {
+    text-decoration: none;
+}
+.sedans a {
+    color: var(--bright-orange);
+}
+.suvs  a {
+    color: var(--dark-cyan);
+}
+.luxury  a {
+    color: var(--very-dark-cyan);
+}
+@media screen and (max-width: 375px) {
+    main.cards {
+        max-width: 20.4375rem;
+        flex-direction: column;
+        margin: 5.5rem 1.55rem;
+    }
+    .card .learnmore {
+        margin-top: 1.5625rem;
+    }
+    .sedans {
+        background-color: var(--bright-orange);
+        /* redis */
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    
+}
+
