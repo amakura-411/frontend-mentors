@@ -18,7 +18,7 @@
 }
 
 body {
-    background-position: center;
+    position: relative;
     background-color: var(--very-light-gray);
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@ body {
     main.cards {
         max-width: 20.4375rem;
         flex-direction: column;
-        margin: 5.5rem 1.5rem;
+        margin: 5.5rem 1.55rem;
     }
     .card .learnmore {
         margin-top: 1.5625rem;
