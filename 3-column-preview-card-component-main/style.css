@@ -26,11 +26,15 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+h1 {
+    visibility: hidden;
+}
 .cards  {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 57.5rem;
+    max-height: 31.25rem;
     margin-top: 2.5rem;
 }
 .card {
@@ -86,14 +90,16 @@ body {
     color: var(--very-light-gray);
     border: 2px solid #fff;
 }
-
-.sedans button {
+a {
+    text-decoration: none;
+}
+.sedans button a {
     color: var(--bright-orange);
 }
-.suvs button {
+.suvs button a {
     color: var(--dark-cyan);
 }
-.luxury button {
+.luxury button a {
     color: var(--very-dark-cyan);
 }
 @media screen and (max-width: 375px) {
