@@ -17,8 +17,6 @@
     --font-family-700: 'Big Shoulders Display', sans-serif;
 }
 
-
-
 body {
     background-color: var(--very-light-gray);
     display: flex;
