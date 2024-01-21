@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --body-font-size: 16px;
+    --font-family: 'karla', sans-serif;
+    --body-font-weight: 400;
+    --heading-font-weight: 700;
+}
+body {
+    position: relative;
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-family);
+}
+.container {
+    width: 100%;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.card {
+    display: grid;
+    padding: 2rem;
+}
+#top {
+    background-color: #fff;
+    color: white;
+    display: grid;
+    align-content: space-evenly;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+h1 {
+    font-size: 24px;
+    font-weight: var(--heading-font-weight);
+    color: var(--cyan);
+}
+#top .card-title {
+    color: var(--bright-yellow);
+    font-weight: var(--body-font-weight);
+    line-height: 1.5625rem;
+    font-size: 19px;
+}
+#top .card-text {
+    color: var(--grayish-blue);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: 1.5;
+}
+#bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#bottom > .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    gap: 20px;
+}
+button {
+    border: none;
+    border-radius: 0.5rem;
+    font-size: var(--body-font-size);
+    font-weight: var(--heading-font-weight);
+    color: white;
+    background-color: var(--bright-yellow);
+    cursor: pointer;
+    padding: 15px 0;
+    margin-top: 15px;
+}
+p {
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: 1.25rem;
+}
+#left {
+    background-color: var(--cyan);
+    color: white;
+    display: grid;
+    border-bottom-left-radius: 0.5rem;
+}
+#left span {
+    font-size: 32px;
+}
+#left .card-content {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+#right {
+    background-color: var(--cyan);
+    /* 薄くする */
+    opacity: 0.9;
+    /* 文字も薄い */
+    color: white;
+    display: grid;
+    align-items: center;
+    border-bottom-right-radius: 0.5rem;
+}
+#right .card-text {
+    opacity: 0.5;
+}
+span#per-month {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
