@@ -31,7 +31,7 @@ body {
   max-width: 23rem;
   margin: auto;
   border: 1.25px solid var(--natural-black);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem var(--natural-black);
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .publish-date {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   font-size: 0.935rem;
   font-weight: var(--normal-weight);
 }
