@@ -28,7 +28,7 @@ body {
 
 .card-container {
   background-color: var(--natural-white);
-  max-width: 20rem;
+  max-width: 23rem;
   margin: auto;
   border: 1.25px solid var(--natural-black);
   border-radius: 0.75rem;
@@ -57,12 +57,12 @@ body {
 
 .publish-date {
   margin-top: 0.75rem;
-  font-size: 0.75rem;
+  font-size: 0.935rem;
   font-weight: var(--normal-weight);
 }
 
 .blog-title {
-  font-size: 1.33rem;
+  font-size: 1.5rem;
   margin-top: 1.25rem;
   font-weight: var(--bold-weight);
   cursor: pointer;
@@ -74,7 +74,6 @@ body {
 .blog-description {
   color: var(--natural-gray);
   margin-top: 1.25rem;
-  font-size: 0.75rem;
   font-weight: var(--normal-weight);
   line-height: 1.25rem;
 }
@@ -100,6 +99,9 @@ body {
   }
   .card-image{
     height: 13.25rem;
+  }
+  .blog-title {
+    font-size: 1.333rem;
   }
   .blog-description {
     font-size: 0.935rem;
