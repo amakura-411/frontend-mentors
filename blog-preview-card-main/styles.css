@@ -34,18 +34,6 @@ body {
   border-radius: 0.75rem;
   box-shadow: 0.5rem 0.5rem var(--natural-black);
 }
-@media screen and (max-width: 375px) {
-  .card-container {
-    max-width: 21rem;
-  }
-  .card-image{
-    height: 13.25rem;
-  }
-  .blog-description {
-    font-size: 0.935rem;
-  }
-
-}
 
 .card-content {
   padding: 1.25rem;
@@ -77,6 +65,10 @@ body {
   font-size: 1.33rem;
   margin-top: 1.25rem;
   font-weight: var(--bold-weight);
+  cursor: pointer;
+}
+.blog-title:hover {
+  color: var(--primary-color);
 }
 
 .blog-description {
@@ -100,4 +92,17 @@ body {
 .author-name {
   font-weight: var(--bold-weight);
   font-size: 0.75rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    max-width: 21rem;
+  }
+  .card-image{
+    height: 13.25rem;
+  }
+  .blog-description {
+    font-size: 0.935rem;
+  }
+
 }
