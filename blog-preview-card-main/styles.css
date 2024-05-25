@@ -33,6 +33,12 @@ body {
   border: 1.25px solid var(--natural-black);
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem var(--natural-black);
+  transition: 0.5s;
+}
+.card-container:has(.blog-title:focus) , .card-container:has(.blog-title:hover){
+  /* 影のつき方の早さを遅くする */
+  transition: 0.5s;
+  box-shadow: 1rem 1rem var(--natural-black);
 }
 
 .card-content {
@@ -67,9 +73,10 @@ body {
   font-weight: var(--bold-weight);
   cursor: pointer;
 }
-.blog-title:hover {
+.blog-title:hover, .blog-title:focus {
   color: var(--primary-color);
 }
+
 
 .blog-description {
   color: var(--natural-gray);
