@@ -24,6 +24,14 @@ Your users should be able to:
   - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
 
+日本語
+
+- デバイスの画面サイズに応じてサイトに最適なレイアウトを表示します
+- ページ上のすべてのインタラクティブ要素のホバー状態を確認します
+- 次の場合、「フォーム」が送信されるとエラー メッセージが表示されます。
+  - すべての「入力」フィールドが空です。このエラーのメッセージは *「[フィールド名] を空にすることはできません」* となります。
+  - 電子メール アドレスの形式が正しくありません (つまり、正しい電子メール アドレスは次の構造を持つ必要があります: `name@host.tld`)。このエラーのメッセージは *「これは電子メールではないようです」* となります。
+
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
 ## Where to find everything
