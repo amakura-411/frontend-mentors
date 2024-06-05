@@ -1,3 +1,20 @@
+/* @import url('https://fonts.google.com/specimen/Poppins'); */
+
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+
+  --accent-blue:  hsl(248, 32%, 49%);
+  --natural--dark-blue:  hsl(249, 10%, 26%);
+  --natural-grayish-blue: hsl(246, 25%, 77%);
+  --bg-white: hsl(0, 100%, 100%);
+
+  --fw-400: font-weight: 400;
+  --fw-500: font-weight: 500;
+  --fw-600: font-weight: 600;
+  --fw-700: font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,62 +27,75 @@ body {
 }
 
 
-
 main {
+  width: 79vw;
+  height: 100vh;
   display: flex;
-  width: 80%;
   align-items: center;
   margin: auto;
-  height: 100vh;
   gap: 2rem;
+  color: var(--bg-white);
+}
+.left {
+  width: 34rem;
 }
 
 h1 {
   text-wrap: balance;
   font-size: 2.75rem;
   line-height: 3rem;
-  color: hsl(0, 100%, 100%);
+  font-weight: bold;
 }
 
-.left {
-  width: 48%;
-}
 .content {
   margin-top: 2rem;
 }
 
 
 
-
-
-.right > p {
-  padding: 1rem;
-  background: #fff;
-  text-align: center;
-  font-size: 0.75rem;
-}
-
-form {
-  margin-top: 1rem;
+.right {
+  width: 34rem;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
-  background-color: hsl(0, 0%, 100%);
-  gap: 1rem;
+}
+
+.right > p {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color:  var(--accent-blue)
+}
+.right > p > span {
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.333rem;
+  padding: 2.25rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-white);
 }
 
 input {
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 button {
   padding: 1rem;
+  background-color: var(--primary-green);
+  border: none;border-radius: 0.5rem;
+  color: #fff;
+
 }
 
 form p {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   text-align: center;
+  color: var(--natural-grayish-blue);
 }
 
 form .note {
-  color: hsl(0, 100%, 74%);
+  color: var(--primary-red);
 }
