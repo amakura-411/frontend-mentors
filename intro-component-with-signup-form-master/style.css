@@ -24,78 +24,82 @@ body {
   font-family: "Poppins", sans-serif;
   background-image: url("images/bg-intro-desktop.png");
   background-color: hsl(0, 100%, 74%);
+  background-position: center;
+  font-size: 1rem;
 }
-
-
 main {
   width: 79vw;
   height: 100vh;
   display: flex;
   align-items: center;
-  margin: auto;
+  margin: 4rem auto;
   gap: 2rem;
   color: var(--bg-white);
 }
-.left {
-  width: 34rem;
-}
-
 h1 {
-  text-wrap: balance;
-  font-size: 2.75rem;
-  line-height: 3rem;
-  font-weight: bold;
+  line-height: 2.25rem;
 }
 
 .content {
   margin-top: 2rem;
+  width: 93%;
+  margin: auto;
 }
-
-
-
 .right {
-  width: 34rem;
   gap: 1rem;
   display: flex;
   flex-direction: column;
 }
-
-.right > p {
-  padding: 1.5rem 1rem;
-  text-align: center;
+.right .billborad {
+  background-color:  var(--accent-blue);
   border-radius: 0.5rem;
-  background-color:  var(--accent-blue)
+
 }
-.right > p > span {
+.right .billborad  p {
+  padding: 1.5rem 3rem;
+  text-align: center;
+}
+.right .billborad  p span {
   font-weight: bold;
 }
 form {
   display: flex;
   flex-direction: column;
   gap: 1.333rem;
-  padding: 2.25rem;
+  padding: 1.25rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
   background-color: var(--bg-white);
 }
 
 input {
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 button {
   padding: 1rem;
+  font-size: 1rem;
   background-color: var(--primary-green);
-  border: none;border-radius: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
   color: #fff;
 
 }
-
 form p {
   font-size: 0.75rem;
   text-align: center;
   color: var(--natural-grayish-blue);
 }
 
-form .note {
+form p .note {
   color: var(--primary-red);
 }
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 89vw;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+}
+
