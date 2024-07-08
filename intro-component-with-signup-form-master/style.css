@@ -1,4 +1,4 @@
-/* @import url('https://fonts.google.com/specimen/Poppins'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
   --primary-red: hsl(0, 100%, 74%);
@@ -9,97 +9,136 @@
   --natural-grayish-blue: hsl(246, 25%, 77%);
   --bg-white: hsl(0, 100%, 100%);
 
-  --fw-400: font-weight: 400;
-  --fw-500: font-weight: 500;
-  --fw-600: font-weight: 600;
-  --fw-700: font-weight: 700;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
 body {
+  color: var(--bg-white);
   font-family: "Poppins", sans-serif;
   background-image: url("images/bg-intro-desktop.png");
-  background-color: hsl(0, 100%, 74%);
-  background-position: center;
-  font-size: 1rem;
-}
-main {
-  width: 79vw;
+  background-color: var( --primary-red);
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  margin: 4rem auto;
-  gap: 2rem;
+  font-style: normal;
   color: var(--bg-white);
 }
-h1 {
-  line-height: 2.25rem;
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 78.5%;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
 }
 
-.content {
-  margin-top: 2rem;
-  width: 93%;
-  margin: auto;
-}
-.right {
-  gap: 1rem;
+.left {
   display: flex;
   flex-direction: column;
+  gap: 2.25rem;
 }
-.right .billborad {
-  background-color:  var(--accent-blue);
-  border-radius: 0.5rem;
+h1 {
+  font-size: 3rem;
+  font-weight: var(--fw-700);
+  line-height: 1.2;
+}
 
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.right .billborad  p {
-  padding: 1.5rem 3rem;
+.billboard {
+  color: var(--natural-grayish-blue);
+  background-color: var(--accent-blue);
   text-align: center;
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
-.right .billborad  p span {
-  font-weight: bold;
+.billboard span {
+  color: var(--bg-white);
+  font-weight: var(--fw-700);
 }
+
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.333rem;
-  padding: 1.25rem;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-  background-color: var(--bg-white);
+  padding: 2rem;
+  background: #fff;
+  gap: 1rem;
+  border-radius: 0.25rem;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-  padding: 1rem;
-}
-#submit_btn {
-  padding: 1rem;
-  font-size: 1rem;
-  background-color: var(--primary-green);
+  padding: 1rem 1.5rem;
+  font-weight: var(--fw-600);
   border: none;
-  border-radius: 0.5rem;
-  color: #fff;
-
+  outline: 1px solid var(--accent-blue);
+  border-radius: 0.25rem;
 }
+input::after {
+  content: '!';
+  background-color: red;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="button"] {
+  background-color: var(--primary-green);
+  color: var(--bg-white);
+}
+input.invalid {
+  color: var(--primary-red);
+  outline: 1px solid var(--primary-red);
+  position: relative;
+}
+
+input.invalid::placeholder {
+  background-color: var(--primary-red);
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: end;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 1.5rem;
+}
+
+
+.errors {
+  color: red;
+  font-size: 0.75rem;
+  text-align: end;
+}
+
 form p {
   font-size: 0.75rem;
-  text-align: center;
   color: var(--natural-grayish-blue);
+  text-align: center;
 }
-
 form p .note {
   color: var(--primary-red);
+  font-weight: var(--fw-600);
 }
-
-@media screen and (max-width: 375px) {
-  main {
-    width: 89vw;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-}
-

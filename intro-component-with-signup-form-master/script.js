@@ -10,10 +10,15 @@ const nameValidation = (name) => {
 
 const emailValidation = (email) => {
   if (typeof email !== "string" || email.length === 0) {
+    emailError.innerText = "Email cannot be empty"
     return false;
   }
   const mailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
-  return mailRegex.test(email);
+  if (mailRegex.test(email)) {
+    return true
+  }
+  emailError.innerText = "Looks like this is not an email";
+  return false;
 };
 
 const passwordValidation = (password) => {
@@ -23,27 +28,51 @@ const passwordValidation = (password) => {
   return true;
 };
 
-const button = document.getElementById("submit_btn");
-const firstNameInput = document.getElementById("firstName");
-const lastNameInput = document.getElementById("lastName");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
 
-firstNameInput.addEventListener("input", () => {
-  firstNameInput.style.border = "none";
+// FirstName
+const firstNameInput = document.getElementById("firstName");
+const firstnameError = document.getElementById('firstname_error');
+//LastName
+const lastNameInput = document.getElementById("lastName");
+const lastnameError = document.getElementById('lastname_error');
+//Email
+const emailInput = document.getElementById("email");
+const emailError = document.getElementById('email_error');
+//Password
+const passwordInput = document.getElementById("password");
+const passwordError = document.getElementById('password_error');
+//Button
+const button = document.getElementById("submit_btn");
+
+
+firstNameInput.addEventListener("focus", () => {
+  firstNameInput.classList.remove('invalid');
   firstNameInput.style.color = "black";
+  firstNameInput.style.outline = "1px solid var(--accent-blue)"
+  firstnameError.innerText = "";
+  firstNameInput.placeholder = "First Name"
 });
-lastNameInput.addEventListener("input", () => {
-  lastNameInput.style.border = "none";
+
+lastNameInput.addEventListener("focus", () => {
+  lastNameInput.classList.remove('invalid')
   lastNameInput.style.color = "black";
+  lastNameInput.style.outline = "1px solid var(--accent-blue)"
+  lastnameError.innerText = "";
+  lastNameInput.placeholder = "Last Name"
 });
-emailInput.addEventListener("input", () => {
-  emailInput.style.border = "none";
+
+emailInput.addEventListener("focus", () => {
+  email.classList.remove('invalid');
   emailInput.style.color = "black";
+  emailInput.style.outline = "1px solid var(--accent-blue)"
+  emailError.innerText = "";
+  emailInput.placeholder = "Email Address";
 });
-passwordInput.addEventListener("input", () => {
-  passwordInput.style.border = "none";
-  passwordInput.style.color = "black";
+
+passwordInput.addEventListener("focus", () => {
+  passwordInput.classList.remove('invalid');
+  passwordError.innerText = "";
+  passwordInput.placeholder = 'Password'
 });
 
 button.onclick = () => {
@@ -55,25 +84,24 @@ button.onclick = () => {
 
   // バリデーションチェック
   if (!nameValidation(firstNameValue)) {
-    console.log("First Name cannot be empty");
+    firstnameError.innerText = "First Name cannot be empty";
     invalidInput(firstNameInput);
   }
   if (!nameValidation(lastNameValue)) {
-    console.log("Last Name cannot be empty");
+    lastnameError.innerText = "Last Name cannot be empty";
     invalidInput(lastNameInput);
   }
   if (!emailValidation(mailValue)) {
-    console.log("Looks like this is not an email");
     invalidInput(emailInput);
   }
   if (!passwordValidation(passwordValue)) {
-    console.log("Password cannot be empty");
+    passwordError.innerText = "Password cannot be empty"
     invalidInput(passwordInput);
   }
 };
 
 const invalidInput = (input) => {
-  input.style.border = "2px solid red";
-  input.style.color = "red";
-  input.placeholder = "";
+  input.classList.add('invalid')
+  // placeholderの差し替え
+  input.placeholder = "!";
 };
