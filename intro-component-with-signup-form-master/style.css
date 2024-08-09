@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
+  /* color */
   --primary-red: hsl(0, 100%, 74%);
   --primary-green: hsl(154, 59%, 51%);
-
   --accent-blue:  hsl(248, 32%, 49%);
   --natural--dark-blue:  hsl(249, 10%, 26%);
   --natural-grayish-blue: hsl(246, 25%, 77%);
   --bg-white: hsl(0, 100%, 100%);
 
+  /* font-size */
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
@@ -24,29 +25,39 @@
 
 body {
   color: var(--bg-white);
-  font-family: "Poppins", sans-serif;
   background-image: url("images/bg-intro-desktop.png");
   background-color: var( --primary-red);
   width: 100vw;
   height: 100vh;
-  font-style: normal;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   color: var(--bg-white);
 }
-
 main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 78.5%;
+  grid-template-columns: 1fr 1fr;
+  /* width: 80vw; */
   height: 100%;
-  align-items: center;
+
+  /* 独自 */
+  gap: 1.875rem;
+  /* margin: 0 165px; */
+  width: 77.08vw;
   margin: 0 auto;
-  gap: 1rem;
+}
+form {
+  padding: 2.5rem;
+}
+input {
+  padding: 0.625rem;;
 }
 
 .left {
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
+  text-align: left;
+  justify-content: center;
 }
 h1 {
   font-size: 3rem;
@@ -54,30 +65,51 @@ h1 {
   line-height: 1.2;
 }
 
+@media screen and (max-width: 375px) {
+  /* main {
+    width: 87vw;
+  } */
+  .left {
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }  
+}
+
+
 .right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
+/* width:549 * 60 */
+
 .billboard {
   color: var(--natural-grayish-blue);
   background-color: var(--accent-blue);
   text-align: center;
-  padding: 1rem;
   border-radius: 0.25rem;
+  text-wrap: balance;
+
+  padding: 1.125rem;
 }
 .billboard span {
   color: var(--bg-white);
   font-weight: var(--fw-700);
 }
 
+/* idth: 540px;
+    height: 475px; */
+
 form {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
   background: #fff;
-  gap: 1rem;
+  gap: 1.5rem;
   border-radius: 0.25rem;
+  /* padding: 2rem; */
 }
 form > div {
   display: flex;
@@ -85,7 +117,7 @@ form > div {
 }
 
 input {
-  padding: 1rem 1.5rem;
+  /* padding: 1rem 1.5rem; */
   font-weight: var(--fw-600);
   border: none;
   outline: 1px solid var(--accent-blue);
@@ -102,9 +134,12 @@ input::after {
   justify-content: center;
 }
 
+/* width: 460px;
+    height: 55px; */
 input[type="button"] {
   background-color: var(--primary-green);
   color: var(--bg-white);
+  font-size: 1.125rem;
 }
 input.invalid {
   color: var(--primary-red);
@@ -141,4 +176,14 @@ form p {
 form p .note {
   color: var(--primary-red);
   font-weight: var(--fw-600);
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    flex-direction: column;
+  }
+  main .left, main  .right {
+    width: 100%;
+  }
+  
 }
