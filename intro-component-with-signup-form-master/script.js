@@ -31,49 +31,38 @@ const passwordValidation = (password) => {
 
 // FirstName
 const firstNameInput = document.getElementById("firstName");
-const firstnameError = document.getElementById('firstname_error');
+const firstnameError = document.getElementById('error_firstname');
 //LastName
 const lastNameInput = document.getElementById("lastName");
-const lastnameError = document.getElementById('lastname_error');
+const lastnameError = document.getElementById('error_lastname');
 //Email
 const emailInput = document.getElementById("email");
-const emailError = document.getElementById('email_error');
+const emailError = document.getElementById('error_email');
 //Password
 const passwordInput = document.getElementById("password");
-const passwordError = document.getElementById('password_error');
+const passwordError = document.getElementById('error_password');
 //Button
-const button = document.getElementById("submit_btn");
+const button = document.getElementById("btn_claim-trial");
 
 
-firstNameInput.addEventListener("focus", () => {
-  firstNameInput.classList.remove('invalid');
-  firstNameInput.style.color = "black";
-  firstNameInput.style.outline = "1px solid var(--accent-blue)"
-  firstnameError.innerText = "";
-  firstNameInput.placeholder = "First Name"
-});
+// 入力し始めると、invalidクラスを削除する
+firstNameInput.oninput = () => {
+  firstNameInput.classList.remove('input-invalid');
+  firstnameError.innerText = '';
+};
 
-lastNameInput.addEventListener("focus", () => {
-  lastNameInput.classList.remove('invalid')
-  lastNameInput.style.color = "black";
-  lastNameInput.style.outline = "1px solid var(--accent-blue)"
-  lastnameError.innerText = "";
-  lastNameInput.placeholder = "Last Name"
-});
-
-emailInput.addEventListener("focus", () => {
-  email.classList.remove('invalid');
-  emailInput.style.color = "black";
-  emailInput.style.outline = "1px solid var(--accent-blue)"
-  emailError.innerText = "";
-  emailInput.placeholder = "Email Address";
-});
-
-passwordInput.addEventListener("focus", () => {
-  passwordInput.classList.remove('invalid');
-  passwordError.innerText = "";
-  passwordInput.placeholder = 'Password'
-});
+lastNameInput.oninput = () => {
+  lastNameInput.classList.remove('input-invalid');
+  lastnameError.innerText = '';
+}
+emailInput.oninput = () => {
+  emailInput.classList.remove('input-invalid');
+  emailError.innerText = '';
+}
+passwordInput.oninput = () => {
+  passwordInput.classList.remove('input-invalid');
+  passwordError.innerText = '';
+}
 
 button.onclick = () => {
   // ボタンをクリックした際、inputのバリューに対して、チェックを行う
@@ -101,7 +90,6 @@ button.onclick = () => {
 };
 
 const invalidInput = (input) => {
-  input.classList.add('invalid')
-  // placeholderの差し替え
-  input.placeholder = "!";
+  input.classList.add('input-invalid')
+  input.placeholder = '';
 };
