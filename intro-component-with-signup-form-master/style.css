@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* color */
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --natural--dark-blue: hsl(249, 10%, 26%);
+  --natural-grayish-blue: hsl(246, 25%, 77%);
+  --bg-white: hsl(0, 100%, 100%);
+
+  /* font-size */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--bg-white);
+
+  background-color: var(--primary-red);
+  background-image: url("images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--fw-400);
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 69.375rem;
+  width: 100%;
+  gap: 1.875rem;
+  margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: var(--fw-700);
+  text-wrap: balance;
+  line-height: 1.1;
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5625rem;
+  width: 50%;
+}
+.message {
+  width: 100%;
+  text-align: center;
+  text-wrap: balance;
+  padding: 1.125rem 0;
+
+  color: var(--natural-grayish-blue);
+  background-color: var(--accent-blue);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0.375rem 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+}
+
+.message span {
+  color: var(--bg-white);
+  font-weight: var(--fw-700);
+}
+/* Form */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  gap: 1.25rem;
+  box-shadow: 0px 0.5rem 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 0.625rem;
+
+  background: #fff;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 1.0625rem;
+  border: none;
+  border-radius: 0.25rem;
+  outline: 1px solid var(--natural-grayish-blue);
+
+  font-size: 1rem;
+  font-weight: var(--fw-600);
+}
+.button-primary {
+  outline: 0.0625rem solid hsl(154, 60%, 45%);
+  box-shadow: 0px 0.1875rem 0px 0px hsl(154, 60%, 45%);
+
+  background-color: var(--primary-green);
+  color: var(--bg-white);
+}
+
+.input-invalid {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 25px;
+  outline: 2px solid var(--primary-red);
+  color: var(--primary-red);
+}
+.error-message {
+  color: red;
+  text-align: end;
+  font-size: 1rem;
+}
+.agreement-text {
+  color: var(--natural-grayish-blue);
+  font-size: 0.75rem;
+  text-align: center;
+}
+.agreement-text .note {
+  color: var(--primary-red);
+  font-weight: var(--fw-600);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+  }
+  main {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.875rem;
+    padding: 0 1.5rem;
+  }
+  .intro {
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .form-container {
+    width: 100%;
+    align-items: center;
+  }
+  .message {
+    padding: 1.25rem 0;
+  }
+  form {
+    padding: 1.5rem !important;
+    gap: 1rem;
+  }
+  input {
+    padding: 1.171875rem;
+  }
+  .agreement-text {
+    margin: auto 0.75rem;
+  }
+}
