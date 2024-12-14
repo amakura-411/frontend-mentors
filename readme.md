@@ -1,26 +1,42 @@
-# Frontend Mentor Challenges
+# CHALLENGE NAME
 
-## Overview
+## チャレンジ内容
 
-The repository is my solution for the challenge of [Frontend Mentor](https://www.frontendmentor.io/).
+ユーザーは次のことができるようにする必要があります：
 
-## Description
+ページ上のすべてのインタラクティブ要素に対してホバーとフォーカスの状態を確認するスクリーンショット
 
-Frontend Mentor is a website that provides challenges for front-end developers. The challenges are divided into 3 levels: Newbie, Junior, Intermediate. Each challenge has a design file for desktop and mobile. The challenges are free, but if you want to see the solution of other developers, you have to pay for it.
+## リンク
 
-## Challenges
+ソリューションの URL:
 
-I have solved the following challenges:
+ライブサイトの URL:
 
-Now I don't have my solutions. I will upload them later.
+## 私のプロセス
 
-## Contribution
+### 使用技術
 
-If you want to challenge [frontendmentor.io](https://www.frontendmentor.io/), You will follow the steps below:
+- セマンティック HTML5 マークアップ
+- CSS カスタムプロパティ
+- Flexbox
+- CSS Grid
+- モバイルファーストのワークフロー
+- React - JS ライブラリ
+- Next.js - React フレームワーク
+- Styled Components - スタイル用
 
-1.sign up [frontendmentor.io](https://www.frontendmentor.io/)
-2.choose a challenge
+### 学んだこと
 
-Ahh.. I will write it after I had suggest solutions for the challenges.
+このプロジェクトを通じて学んだ主な内容は次のとおりです：
 
+（ここに学んだことを記載してください）
 
+## 今後の開発
+
+今後のプロジェクトで重点を置きたい領域は以下のとおりです：
+
+（ここに今後の開発計画を記載してください）
+
+## 便利なリソース
+
+CSS Tricks - このウェブサイトは、さまざまな CSS の概念やテクニックに関する貴重な記事やチュートリアルを提供しています。Flexbox や CSS Grid をより理解するのに役立ちました。 MDN Web Docs - MDN は HTML、CSS、JavaScript に関する包括的なドキュメントを提供しています。問題に遭遇したときは、MDN が解決策を見つけるための私の指標となりました。

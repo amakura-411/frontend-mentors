@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --primary-color: hsl(47, 88%, 63%);
+  --natural-white: hsl(0, 0%, 100%);
+  --natural-gray: hsl(0, 0%, 50%);
+  --natural-black: hsl(0, 0%, 7%);
+  --body-copy: 1rem;
+  --normal-weight: 500;
+  --bold-weight: 800;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+
+.card-container {
+  background-color: var(--natural-white);
+  max-width: 23rem;
+  margin: auto;
+  border: 1.25px solid var(--natural-black);
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem var(--natural-black);
+  transition: 0.5s;
+}
+.card-container:has(.blog-title:focus) , .card-container:has(.blog-title:hover){
+  /* 影のつき方の早さを遅くする */
+  transition: 0.5s;
+  box-shadow: 1rem 1rem var(--natural-black);
+}
+
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-image {
+  border-radius: 0.5rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.status {
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.33rem 0.75rem;
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: var(--bold-weight);
+}
+
+.publish-date {
+  margin-top: 1rem;
+  font-size: 0.935rem;
+  font-weight: var(--normal-weight);
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  margin-top: 1.25rem;
+  font-weight: var(--bold-weight);
+  cursor: pointer;
+}
+.blog-title:hover, .blog-title:focus {
+  color: var(--primary-color);
+}
+
+
+.blog-description {
+  color: var(--natural-gray);
+  margin-top: 1.25rem;
+  font-weight: var(--normal-weight);
+  line-height: 1.25rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.author-img {
+  width: 35px;
+  height: 35px;
+}
+.author-name {
+  font-weight: var(--bold-weight);
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    max-width: 21rem;
+  }
+  .card-image{
+    height: 13.25rem;
+  }
+  .blog-title {
+    font-size: 1.333rem;
+  }
+  .blog-description {
+    font-size: 0.935rem;
+  }
+
+}
